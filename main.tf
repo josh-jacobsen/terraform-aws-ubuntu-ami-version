@@ -6,3 +6,7 @@ data "aws_ami" "ubuntu" {
   }
   owners = ["099720109477"]
 }
+
+output "aws_ami" {
+    value = data.aws_ami.ubuntu.id
+}
